@@ -5,7 +5,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 
 @Entity
 @Table(name = "elections")
@@ -20,11 +19,7 @@ public class Election {
     @Column(name = "year")
     private int year;
 
-    @Column(name = "seats")
-    private ArrayList<String> seats;
-
-    public Election(int year, ArrayList<String> seats) {
+    public Election(int year) {
         this.year = year;
-        this.seats = seats;
     }
 }
