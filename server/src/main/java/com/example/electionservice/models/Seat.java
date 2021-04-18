@@ -16,11 +16,11 @@ public class Seat {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "seat_name")
+    private String seatName;
 
-    public Seat (String Name) {
-        this.name = name;
+    public Seat(String seatName) {
+        this.seatName = seatName;
     }
 
 }
