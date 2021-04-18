@@ -37,7 +37,6 @@ public class Election {
                     updatable = false)
             }
     )
-
     private List<Seat> seats;
 
     public Election(int year) {
