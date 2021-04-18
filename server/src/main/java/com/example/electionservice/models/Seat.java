@@ -5,6 +5,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "seats")
@@ -19,8 +21,11 @@ public class Seat {
     @Column(name = "seat_name")
     private String seatName;
 
+    private List<Election> elections;
+
     public Seat(String seatName) {
         this.seatName = seatName;
+        this.elections = new ArrayList<>();
     }
 
 }
