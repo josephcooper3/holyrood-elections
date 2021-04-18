@@ -44,4 +44,8 @@ public class Seat {
         this.elections = new ArrayList<>();
     }
 
+    public void addElection(Election election) {
+        this.elections.add(election);
+    }
+
 }

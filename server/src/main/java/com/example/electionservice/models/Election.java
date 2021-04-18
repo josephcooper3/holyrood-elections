@@ -43,4 +43,9 @@ public class Election {
         this.year = year;
         this.seats = new ArrayList<>();
     }
+
+    public void addSeat(Seat seat) {
+        this.seats.add(seat);
+    }
+
 }
