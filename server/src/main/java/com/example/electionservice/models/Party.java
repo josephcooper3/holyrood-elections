@@ -5,6 +5,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name  = "parties")
@@ -19,7 +21,11 @@ public class Party {
     @Column(name = "party_name")
     private String partyName;
 
+    @OneToMany(mappedBy = "party")
+    private List<Result> results;
+
     public Party(String partyName) {
         this.partyName = partyName;
+        this.results = new ArrayList<Result>();
     }
 }

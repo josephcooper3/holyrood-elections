@@ -28,9 +28,6 @@ public class DataLoader implements ApplicationRunner {
         Seat edinCentral = new Seat("Edinburgh Central");
         seatRepository.save(edinCentral);
 
-        sixteen.addSeat(edinCentral);
-        electionRepository.save(sixteen);
-
     }
 
 }
