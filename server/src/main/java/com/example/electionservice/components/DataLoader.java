@@ -58,7 +58,7 @@ public class DataLoader implements ApplicationRunner {
 
         resultRepository.save(new Result(sixteen, edinCentral, conservative,  10399));
         resultRepository.save(new Result(sixteen, edinCentral, snp, 9789));
-        resultRepository.save(new Result(sixteen,edinCentral, labour, 7546));
+        resultRepository.save(new Result(sixteen, edinCentral, labour, 7546));
         resultRepository.save(new Result(sixteen, edinCentral, green, 4644));
         resultRepository.save(new Result(sixteen, edinCentral, libDem, 1672));
         resultRepository.save(new Result(sixteen, edinCentral, libertarian, 119));
