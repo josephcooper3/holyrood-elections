@@ -31,10 +31,10 @@ public class Result {
     @JoinColumn(name = "party_id", nullable = false)
     private Party party;
 
-    public Result(int votes, Election election, Seat seat, Party party) {
-        this.votes = votes;
+    public Result(Election election, Seat seat, Party party, int votes) {
         this.election = election;
         this.seat = seat;
         this.party = party;
+        this.votes = votes;
     }
 }
