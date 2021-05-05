@@ -44,12 +44,11 @@ public class Election {
 
     public Election(int year) {
         this.year = year;
-        this.results = new ArrayList<Result>();
-//        this.seats = new ArrayList<>();
+        this.results = new ArrayList<>();
     }
 
-//    public void addSeat(Seat seat) {
-//        this.seats.add(seat);
-//    }
+    public void addResult(Result result) {
+        this.results.add(result);
+    }
 
 }
