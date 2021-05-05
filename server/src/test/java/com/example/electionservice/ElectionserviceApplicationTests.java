@@ -2,7 +2,6 @@ package com.example.electionservice;
 
 import com.example.electionservice.models.Election;
 import com.example.electionservice.repositories.ElectionRepository;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,28 +14,26 @@ class ElectionserviceApplicationTests {
 	@Autowired
 	ElectionRepository electionRepository;
 
-	@BeforeEach
-	public void init() {
-		electionRepository.deleteAll();
-	}
-
 	@Test
 	void contextLoads() {
 	}
 
 	@Test
 	public void createElection() {
+		long countBefore = electionRepository.count();
 		Election sixteen = new Election(2016);
 		electionRepository.save(sixteen);
-		assertEquals(1, electionRepository.count());
+		assertEquals(countBefore + 1, electionRepository.count());
+		electionRepository.delete(sixteen);
 	}
 
 	@Test
 	public void deleteElection() {
+		long countBefore = electionRepository.count();
 		Election sixteen = new Election(2016);
 		electionRepository.save(sixteen);
 		electionRepository.delete(sixteen);
-		assertEquals(0, electionRepository.count());
+		assertEquals(countBefore, electionRepository.count());
 	}
 
 }
